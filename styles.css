@@ -1,0 +1,43 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(JuliusSansOneAmended.ttf);
+}
+
+body {
+    background-color: #3D4849;
+}
+
+main {
+    /* background-color: #36454f; */
+    background-color: #3D4849;
+    color: #FFFAFA;
+    font-family: myFirstFont;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.item {
+    margin-top: 30px;
+    font-size: 50px;
+}
+
+#progress {
+    margin-top: 5px;
+    width: 800px;
+    height: 10px;
+    background-color: #FFFAFA;
+    border-radius: 20px;
+}
+
+#complete {
+    background-color: Green;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
