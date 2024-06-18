@@ -30,10 +30,10 @@ let current_hour = today.getHours();
 
 // Get minutes
 let current_minute = today.getMinutes();
-//let current_minute = 0; // for testing
+// let current_minute = 11; // for testing
 
 // Variable to add a 0 in the single digits
-let current_minute_full;
+let current_minute_full = current_minute;
 
 // Logic to account for single digit minute
 if(current_minute < 10){
@@ -41,14 +41,14 @@ if(current_minute < 10){
 }
 
 // Full time 
-let current_time = "Time: " + current_hour + ":" + current_minute_full;
+// let current_time = "Time: " + current_hour + ":" + current_minute_full;
+let current_time = `Time: ${current_hour}:${current_minute_full}`;
 
 // Get time id in HTML
 const timeID = document.getElementById("time");
 
 // Render current time to page
 timeID.innerHTML = current_time;
-
 
 
 
