@@ -10,7 +10,7 @@ setInterval(refresh, 30000); // 1000 = 1 second, 600000 = 10 mins
 
 // Display Current Time
 // Get Current Date & Time
-let today = new Date();
+let today = new Date(new Date().toLocaleString("en-US", {timeZone: "AST"})); // Alaska Time
 
 // Gets day by integetr 0-6
 let days_int = today.getDay();
@@ -21,18 +21,18 @@ const days_of_the_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"
 // Gets the days of the array
 let day = days_of_the_week[days_int];
 
-
+let alaska = new Date(new Date().toLocaleString("en-US", {timeZone: "AST"})); 
 
 
 // Get Hour
-// let current_hour = today.getHours();
-let current_hour = 9;
+let current_hour = today.getHours();
+//let current_hour = 9; //for testing
 
 // Get minutes
-// let current_minute = today.getMinutes();
-let current_minute = 0;
+let current_minute = today.getMinutes();
+//let current_minute = 0; // for testing
 
-// Variable to add a 0 in the signle digits
+// Variable to add a 0 in the single digits
 let current_minute_full;
 
 // Logic to account for single digit minute
@@ -41,7 +41,7 @@ if(current_minute < 10){
 }
 
 // Full time 
-let current_time = "Time: " + current_hour + ":" + current_minute;
+let current_time = "Time: " + current_hour + ":" + current_minute_full;
 
 // Get time id in HTML
 const timeID = document.getElementById("time");
