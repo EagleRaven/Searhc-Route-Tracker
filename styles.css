@@ -24,12 +24,12 @@ main {
 
 .item {
     margin-top: 30px;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 #progress {
     margin-top: 5px;
-    width: 600px;
+    width: 500px;
     height: 10px;
     background-color: #FFFAFA;
     border-radius: 20px;
