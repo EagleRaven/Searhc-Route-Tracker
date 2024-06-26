@@ -65,6 +65,15 @@ const completeID = document.getElementById("complete");
 const prog_color = "Green";
 
 
+
+// Setting variable names for stops
+const vp = "Vintage Park";
+const lab = "LAB";
+const asp = "AK Seaplanes";
+const aac = "Air Cargo";
+const fsc = "Front St. Clinic";
+const fsclc = "Front Street Midtown";
+
 // Route Function
 function route(){
     let status;
@@ -75,77 +84,77 @@ function route(){
         completeID.style.backgroundColor = prog_color;
     }
     else if (current_hour == 9 && current_minute < 15){
-        status = "Current: ERG Driver getting ready for run<br>Next: VP & ASP";
+        status = `Current: ERG Driver getting ready for run<br>Next: ${vp} & ${asp}`;
         completeID.style.width = 6 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 9 && current_minute <= 59){
-        status = "Current: VP & ASP<br>Next: LAB";
+        status = `Current: ${vp} & ${asp}<br>Next: ${lab}`;
         completeID.style.width = 12 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 10 && current_minute < 30){
-        status = "Current: LAB<br>Next: ASP";
+        status = `Current: ${lab}<br>Next: ${asp}`;
         completeID.style.width = 18 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 10 && current_minute <= 59){
-        status = "Current: ERG Driver Downtime<br>Next: ASP";
+        status = `Current: ERG Driver Downtime<br>Next: ${asp}`;
         completeID.style.width = 24 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 11 && current_minute < 30){
-        status = "Current: ERG Driver Downtime<br>Next: ASP";
+        status = `Current: ERG Driver Downtime<br>Next: ${asp}`;
         completeID.style.width = 30 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if (current_hour == 11 && current_minute <= 59){
-        status = "Current: ASP & OTP<br>Next: LAB";
+        status = `Current: ${asp} & OTP<br>Next: ${lab}`;
         completeID.style.width = 36 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if (current_hour == 12 && current_minute < 30){
-        status = "Current: ASP & OTP<br>Next: LAB";
+        status = `Current: ${asp} & OTP<br>Next: ${lab}`;
         completeID.style.width = 42 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 12 && current_minute <= 59){
-        status = "Current: LAB<br>Next: ASP";
+        status = `Current: ${lab}<br>Next: ${asp}`;
         completeID.style.width = 48 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 13 && current_minute < 30){
-        status = "Current: VP<br>Next: LAB";
+        status = `Current: ${vp}<br>Next: ${lab}`;
         completeID.style.width = 54 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 13 && current_minute <= 59){
-        status = "Current: ERG Driver Downtime<br>Next: ASP";
+        status = `Current: ERG Driver Downtime<br>Next: ${asp}`;
         completeID.style.width = 60 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 14 && current_minute < 15){
-        status = "Current: ERG Driver Downtime<br>Next: ASP";
+        status = `Current: ERG Driver Downtime<br>Next: ${asp}`;
         completeID.style.width = 66 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 14 && current_minute <= 59){
-        status = "Current: ASP<br>Next: LAB";
+        status = `Current: ${asp}<br>Next: ${lab}`;
         completeID.style.width = 72 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 15 && current_minute >=20 && current_minute < 45 && days_int == 1 || days_int == 3 || days_int == 5){
-        status = "Current: FSC L.C.<br>Next: LAB";
+        status = `Current: ${fsclc}<br>Next: ${lab}`;
         completeID.style.width = 78 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 16 && current_minute < 15){
-        status = "Current: VP<br>Next: LAB";
+        status = `Current: ${vp}<br>Next: ${lab}`;
         completeID.style.width = 84 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 16 && current_minute <= 59){
-        status = "Current: LAB<br>Next: AAC & ASP";
+        status = `Current: ${lab}<br>Next: ${aac} & ${asp}`;
         completeID.style.width = 95 + "%";
         completeID.style.backgroundColor = prog_color;
     }
