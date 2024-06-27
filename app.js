@@ -15,6 +15,7 @@ let today = new Date(new Date().toLocaleString("en-US", {timeZone: "AST"})); // 
 // Gets day by integetr 0-6
 let days_int = today.getDay();
 
+
 // Array of all days
 const days_of_the_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
@@ -26,11 +27,11 @@ let alaska = new Date(new Date().toLocaleString("en-US", {timeZone: "AST"}));
 
 // Get Hour
 let current_hour = today.getHours();
-//let current_hour = 9; //for testing
+// let current_hour = 17; //for testing
 
 // Get minutes
 let current_minute = today.getMinutes();
-// let current_minute = 11; // for testing
+// let current_minute = 0; // for testing
 
 // Variable to add a 0 in the single digits
 let current_minute_full = current_minute;
@@ -124,33 +125,53 @@ function route(){
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 13 && current_minute < 30){
-        status = `Current: ${vp}<br>Next: ${lab}`;
+        status = `Current: ${vp}<br>Next: ${lab} via Front Desk OBGYN`;
         completeID.style.width = 54 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 13 && current_minute <= 59){
-        status = `Current: ERG Driver Downtime<br>Next: ${asp}`;
+        status = `Current: ${lab}<br>Next: ${asp}`;
         completeID.style.width = 60 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 14 && current_minute < 15){
-        status = `Current: ERG Driver Downtime<br>Next: ${asp}`;
-        completeID.style.width = 66 + "%";
+        status = `Current: ${lab}<br>Next: Collect at ${asp}`;
+        completeID.style.width = 63 + "%";
+        completeID.style.backgroundColor = prog_color;
+    }
+    else if(current_hour == 14 && current_minute < 45){
+        status = `Current: Collect at ${asp}<br>Next: Collect at ${vp}`;
+        completeID.style.width = 68 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 14 && current_minute <= 59){
-        status = `Current: ${asp}<br>Next: ${lab}`;
+        status = `Current: Collect at ${vp}<br>Next: Collect at ${fsc}`;
+        completeID.style.width = 70 + "%";
+        completeID.style.backgroundColor = prog_color;
+    }
+    else if(current_hour == 15 && current_minute >=20 && current_minute < 45 && (days_int == 1 || days_int == 3 || days_int == 5)){
+        status = `Current: ${fsclc}<br>Next: ${lab}`;
         completeID.style.width = 72 + "%";
         completeID.style.backgroundColor = prog_color;
     }
-    else if(current_hour == 15 && current_minute >=20 && current_minute < 45 && days_int == 1 || days_int == 3 || days_int == 5){
-        status = `Current: ${fsclc}<br>Next: ${lab}`;
+    else if(current_hour == 15 && current_minute < 45){
+        status = `Current: ${fsc}<br>Next: ${lab} via OBGYN`;
+        completeID.style.width = 75 + "%";
+        completeID.style.backgroundColor = prog_color;
+    }
+    else if(current_hour == 15 && current_minute >= 45){
+        status = `Current: ${lab}<br>Next: ${vp}`;
         completeID.style.width = 78 + "%";
+        completeID.style.backgroundColor = prog_color;
+    }
+    else if(current_hour == 16 && current_minute < 5){
+        status = `Current: ${lab}<br>Next: ${vp}`;
+        completeID.style.width = 80 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 16 && current_minute < 15){
         status = `Current: ${vp}<br>Next: ${lab}`;
-        completeID.style.width = 84 + "%";
+        completeID.style.width = 88 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 16 && current_minute <= 59){
