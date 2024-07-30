@@ -21,6 +21,8 @@ const days_of_the_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"
 
 // Gets the days of the array
 let day = days_of_the_week[days_int];
+// let day = "Saturday"; // for testing
+// let day = "Sunday"; // for testing
 
 let alaska = new Date(new Date().toLocaleString("en-US", {timeZone: "AST"})); 
 
@@ -187,6 +189,15 @@ function route(){
     else {
         status = "Unknown"
     }
+
+
+    // Check if Weekend
+    if(day === "Saturday" || day === "Sunday"){
+        status = "Current: Weekend, driver not running";
+        completeID.style.width = 0 + "%";
+
+    }
+
 
     return status;
 }
