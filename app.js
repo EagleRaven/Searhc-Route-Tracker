@@ -102,12 +102,12 @@ function route(){
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 10 && current_minute <= 59){
-        status = `Current: ERG Driver Downtime<br>Next: ${asp}`;
+        status = `Current: Driver Stop-over at ERG Office<br>Next: ${asp}`;
         completeID.style.width = 24 + "%";
         completeID.style.backgroundColor = prog_color;
     }
     else if(current_hour == 11 && current_minute < 30){
-        status = `Current: ERG Driver Downtime<br>Next: ${asp}`;
+        status = `Current: Driver Stop-over at ERG Office<br>Next: ${asp}`;
         completeID.style.width = 30 + "%";
         completeID.style.backgroundColor = prog_color;
     }
